@@ -17,7 +17,7 @@ const projects = [
     highlights: [
       "Real-time seat selection and booking",
       "Secure online payments and e-ticketing",
-      "2 hours before the showtimg, you can cancel your booking",
+      "2 hours before the showtime, you can cancel your booking",
       "Admin dashboard for cinema partners",
     ],
     techStack: [
