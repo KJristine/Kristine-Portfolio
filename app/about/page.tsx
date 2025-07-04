@@ -75,7 +75,7 @@ const aboutData = [
         stage: "2013 - 2016",
       },
       {
-        title: "Potter&apos;s Hand Academy",
+        title: "Potters Hand Academy",
         stage: "2010 - 2013",
       },
     ],
