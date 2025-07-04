@@ -84,7 +84,7 @@ const Home = () => {
               </Button>
             </Link>
             <a
-              href="/COBRADO_CV.pdf"
+              href="/KristineJoyCobrado_CV.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"
