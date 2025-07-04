@@ -20,7 +20,8 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Remove 'e' if not used, or use e.preventDefault() if you want to prevent default
+  const handleSubmit = () => {
     // Let the browser submit to Formspree, then clear fields after a short delay
     setTimeout(() => {
       setForm({ name: "", email: "", subject: "", message: "" });

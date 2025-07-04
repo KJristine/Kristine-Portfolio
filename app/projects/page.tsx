@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import Particles from "@/components/particles";
 import { Spotlight } from "@/components/spotlight";
 import { motion } from "framer-motion";
@@ -16,7 +17,7 @@ const projects = [
     highlights: [
       "Real-time seat selection and booking",
       "Secure online payments and e-ticketing",
-      "User reviews, ratings, and social features",
+      "2 hours before the showtimg, you can cancel your booking",
       "Admin dashboard for cinema partners",
     ],
     techStack: [
@@ -149,11 +150,14 @@ const Projects = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.3, duration: 0.7 }}
               >
-                <img
+                <Image
                   src={current.image}
                   alt={current.title}
+                  width={600}
+                  height={340}
                   className="object-cover w-full h-full"
                   style={{ minHeight: 180 }}
+                  priority
                 />
               </motion.div>
               {/* Project Tabs */}

@@ -18,6 +18,7 @@ import {
 import Particles from "@/components/particles";
 import { Spotlight } from "@/components/spotlight";
 import { motion } from "framer-motion";
+import Image from "next/image"; // <-- Add this import
 
 const aboutData = [
   {
@@ -176,10 +177,13 @@ const About = () => {
               {/* Show only big image on Achievements tab */}
               {aboutData[tab].title === "Achievements" ? (
                 <div className="w-full h-[400px] sm:h-[450px] md:h-[500px]">
-                  <img
+                  <Image
                     src="/yses.jpg"
                     alt="Achievements"
+                    width={800}
+                    height={500}
                     className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                    priority
                   />
                 </div>
               ) : (
