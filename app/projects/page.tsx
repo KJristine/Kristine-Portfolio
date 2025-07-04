@@ -64,7 +64,7 @@ const projects = [
     highlights: [
       "Proposed a geo-tagged incident reporting and offline-first for remote areas",
       "Supports SDG goals: Life on Land & Climate Action",
-      "2nd Runner-Up at Future Ideator Quest 2025 held at University of Philippines Los Baños",
+      "2nd Runner-Up at Future Ideator Quest 2025 held at University of Philippines Los Ba&ntilde;os",
       "Figma prototype only",
     ],
     techStack: ["Figma", "UX/UI Design", "Prototyping"],
@@ -206,7 +206,7 @@ const Projects = () => {
                 </h2>
                 <div className="flex items-center gap-4 text-xs text-gray-400 mb-3 font-sora">
                   <span>{current.company}</span>
-                  <span>•</span>
+                  <span>&bull;</span>
                   <span>{current.period}</span>
                 </div>
                 <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-4 font-sora">
@@ -235,7 +235,7 @@ const Projects = () => {
                     >
                       <span className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></span>
                       <span className="text-white/80 text-xs sm:text-sm leading-relaxed font-sora">
-                        {highlight}
+                        {highlight.replace(/'/g, "&apos;")}
                       </span>
                     </motion.li>
                   ))}

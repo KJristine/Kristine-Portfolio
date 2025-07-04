@@ -36,7 +36,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.7 }}
           >
-            HI, I'M KJ COBRADO
+            HI, I&apos;M KJ COBRADO
           </motion.h1>
           {/* Subtitle */}
           <motion.div

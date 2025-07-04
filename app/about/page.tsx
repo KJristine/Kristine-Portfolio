@@ -3,20 +3,16 @@
 import React, { useState } from "react";
 import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import {
-  SiAdobephotoshop,
-  SiAdobexd,
   SiAndroidstudio,
   SiCanva,
   SiExpo,
   SiFirebase,
   SiGit,
   SiGithub,
-  SiGitlab,
   SiIos,
   SiMongodb,
   SiMongoose,
   SiNextdotjs,
-  SiSupabase,
   SiVite,
 } from "react-icons/si";
 import Particles from "@/components/particles";
@@ -50,19 +46,6 @@ const aboutData = [
     ],
   },
   {
-    title: "Achievements",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
-  {
     title: "Education",
     info: [
       {
@@ -82,7 +65,7 @@ const aboutData = [
         stage: "2013 - 2016",
       },
       {
-        title: "Potter's Hand Academy",
+        title: "Potter&apos;s Hand Academy",
         stage: "2010 - 2013",
       },
     ],
@@ -115,7 +98,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.7 }}
             >
-              Hey! I'm Kristine{" "}
+              Hey! I&apos;m Kristine{" "}
               <span className="text-yellow-300">
                 — still figuring things out
               </span>
@@ -129,16 +112,16 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.7 }}
             >
-              I'm kinda new to all this (well… technically I've only been
-              seriously messing with code this year) — websites, apps, techy
-              stuff — and somehow, I've already fallen headfirst into it. Most
-              days, you'll find me googling weird errors, breaking things,
-              fixing them (eventually), and doing my best to look like I know
-              what I'm doing.
+              I&apos;m kinda new to all this (well… technically I&apos;ve only
+              been seriously messing with code this year) — websites, apps,
+              techy stuff — and somehow, I&apos;ve already fallen headfirst into
+              it. Most days, you&apos;ll find me googling weird errors, breaking
+              things, fixing them (eventually), and doing my best to look like I
+              know what I&apos;m doing.
               <br />
               <br />I build both websites and mobile apps — even if I still get
               stuck staring at my screen wondering why is this not working?! But
-              hey, that's half the adventure, right? And nothing beats that
+              hey, that&apos;s half the adventure, right? And nothing beats that
               little victory dance when something finally works… even if it cost
               me my sanity and five cups of coffee.
             </motion.p>
@@ -212,7 +195,7 @@ const About = () => {
                               —
                             </span>
                             <span className="text-yellow-300 font-medium">
-                              {item.stage}
+                              {item.stage.replace(/'/g, "&apos;")}
                             </span>
                           </div>
                         )}

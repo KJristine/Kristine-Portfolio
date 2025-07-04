@@ -25,7 +25,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.7 }}
           >
-            Let's <span className="text-yellow-400">connect.</span>
+            Let&apos;s <span className="text-yellow-400">connect.</span>
           </motion.h2>
           {/* Form */}
           <motion.form
@@ -85,7 +85,7 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.8, duration: 0.6 }}
             >
-              Let's talk
+              Let&apos;s talk
               <BsArrowRight className="ml-2 text-lg sm:text-xl" />
             </motion.button>
           </motion.form>
