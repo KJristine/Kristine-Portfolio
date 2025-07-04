@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 
 interface TypewriterProps {
   words: string[];
-  loop?: boolean;
   typingSpeed?: number;
   deletingSpeed?: number;
   pause?: number;
@@ -12,7 +11,6 @@ interface TypewriterProps {
 
 const Typewriter: React.FC<TypewriterProps> = ({
   words,
-  loop = true,
   typingSpeed = 120,
   deletingSpeed = 60,
   pause = 1500,
