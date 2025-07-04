@@ -46,6 +46,15 @@ const aboutData = [
     ],
   },
   {
+    title: "Achievements",
+    info: [
+      {
+        title: "",
+        stage: "",
+      },
+    ],
+  },
+  {
     title: "Education",
     info: [
       {

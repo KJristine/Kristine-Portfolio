@@ -1,11 +1,32 @@
 "use client";
 
+import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import Particles from "@/components/particles";
 import { Spotlight } from "@/components/spotlight";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Let the browser submit to Formspree, then clear fields after a short delay
+    setTimeout(() => {
+      setForm({ name: "", email: "", subject: "", message: "" });
+    }, 100);
+  };
+
   return (
     <div className="relative w-full min-h-screen h-screen overflow-hidden bg-black pt-5 sm:pt-0">
       {/* Gradient background */}
@@ -37,6 +58,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.7 }}
+            onSubmit={handleSubmit}
           >
             <motion.div
               className="flex flex-col sm:flex-row gap-4 sm:gap-x-6 w-full"
@@ -50,6 +72,8 @@ const Contact = () => {
                 placeholder="Name"
                 className="w-full bg-transparent border border-yellow-300/40 rounded-lg px-4 sm:px-6 py-3 sm:py-4 text-white placeholder:text-yellow-200/40 focus:outline-none focus:border-yellow-400 transition"
                 required
+                value={form.name}
+                onChange={handleChange}
               />
               <input
                 type="email"
@@ -57,6 +81,8 @@ const Contact = () => {
                 placeholder="E-mail"
                 className="w-full bg-transparent border border-yellow-300/40 rounded-lg px-4 sm:px-6 py-3 sm:py-4 text-white placeholder:text-yellow-200/40 focus:outline-none focus:border-yellow-400 transition"
                 required
+                value={form.email}
+                onChange={handleChange}
               />
             </motion.div>
             <motion.input
@@ -68,6 +94,8 @@ const Contact = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.5, duration: 0.6 }}
+              value={form.subject}
+              onChange={handleChange}
             />
             <motion.textarea
               name="message"
@@ -77,6 +105,8 @@ const Contact = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.6, duration: 0.6 }}
+              value={form.message}
+              onChange={handleChange}
             />
             <motion.button
               type="submit"
