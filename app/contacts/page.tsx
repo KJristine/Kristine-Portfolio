@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import Particles from "@/components/particles";
 import { Spotlight } from "@/components/spotlight";
