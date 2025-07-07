@@ -5,6 +5,7 @@ import Image from "next/image";
 import Particles from "@/components/particles";
 import { Spotlight } from "@/components/spotlight";
 import { motion } from "framer-motion";
+import { Lens } from "@/components/magicui/lens";
 
 const projects = [
   {
@@ -13,11 +14,11 @@ const projects = [
     company: "Personal Project",
     period: "2025",
     description:
-      "A digital platform for discovering, booking, and reviewing movies and cinema events. Features real-time seat selection, secure payments, and a vibrant film community.",
+      "A digital platform for discovering, booking, and reviewing movies and cinema events. Features real-time seat selection, dummy payments, and a vibrant film community.",
     highlights: [
       "Real-time seat selection and booking",
-      "Secure online payments and e-ticketing",
-      "2 hours before the showtime, you can cancel your booking",
+      "Dummy payments and e-ticketing",
+      "Cancel your booking 2 hours before the showtime",
       "Admin dashboard for cinema partners",
     ],
     techStack: [
@@ -33,7 +34,7 @@ const projects = [
       live: "https://cine-entrada.vercel.app/",
       github: "https://github.com/KJristine/CineEntrada",
     },
-    image: "/CineEntrada.svg",
+    image: "/CineEntrada.png",
   },
   {
     id: 1,
@@ -53,7 +54,7 @@ const projects = [
       live: "https://tinyurl.com/keeply-demo",
       github: "https://example.com/",
     },
-    image: "/Keeply.svg",
+    image: "/Keeply.png",
   },
   {
     id: 2,
@@ -73,7 +74,7 @@ const projects = [
       live: "https://www.figma.com/proto/pG2kjQszKDhamZnOVxSZPq/SOSeco.?node-id=0-1&t=0LZFzJ37ItCflMVq-1",
       github: "#",
     },
-    image: "/SOSeco.svg",
+    image: "/SOSeco.png",
   },
 ];
 
@@ -150,15 +151,17 @@ const Projects = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.3, duration: 0.7 }}
               >
-                <Image
-                  src={current.image}
-                  alt={current.title}
-                  width={600}
-                  height={340}
-                  className="object-cover w-full h-full"
-                  style={{ minHeight: 180 }}
-                  priority
-                />
+                <Lens>
+                  <Image
+                    src={current.image}
+                    alt={current.title}
+                    width={600}
+                    height={340}
+                    className="object-cover w-full h-full"
+                    style={{ minHeight: 180 }}
+                    priority
+                  />
+                </Lens>
               </motion.div>
               {/* Project Tabs */}
               <motion.div
