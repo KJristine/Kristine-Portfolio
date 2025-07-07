@@ -33,7 +33,7 @@ const projects = [
       live: "https://cine-entrada.vercel.app/",
       github: "https://github.com/KJristine/CineEntrada",
     },
-    image: "/CineEntrada.png",
+    image: "/CineEntrada.svg",
   },
   {
     id: 1,
