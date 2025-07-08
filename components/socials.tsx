@@ -46,9 +46,9 @@ const Socials = () => {
           href={social.link}
           target="_blank"
           rel="noreferrer noopener"
-          className={`text-black ${
+          className={`text-white ${
             social.name === "Github"
-              ? "bg-accent rounded-full p-[5px] hover:text-white"
+              ? "bg-accent rounded-full p-[5px] text-black hover:text-white"
               : "hover:text-yellow-300"
           } transition-all duration-300`}
         >
