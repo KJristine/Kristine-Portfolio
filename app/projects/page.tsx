@@ -39,7 +39,7 @@ const projects = [
   {
     id: 1,
     title: "Keeply",
-    company: "Personal Project",
+    company: "Academic Project",
     period: "2024",
     description:
       "A privacy-focused note-taking and productivity app. Organize tasks, notes, and reminders with robust encryption and a minimalist UI.",
@@ -66,7 +66,7 @@ const projects = [
     highlights: [
       "Proposed a geo-tagged incident reporting and offline-first for remote areas",
       "Supports SDG goals: Life on Land & Climate Action",
-      "2nd Runner-Up at Future Ideator Quest 2025 held at University of Philippines Los Ba&ntilde;os",
+      "2nd Runner-Up at Future Ideator Quest 2025 held at UP Los Baños",
       "Figma prototype only",
     ],
     techStack: ["Figma", "UX/UI Design", "Prototyping"],
@@ -75,6 +75,26 @@ const projects = [
       github: "#",
     },
     image: "/SOSeco.png",
+  },
+  {
+    id: 3,
+    title: "Logify",
+    company: "Personal Project",
+    period: "2025",
+    description:
+      "A mobile app built with React Native and Expo Go to track and visualize OJT/internship hours. Designed for students and supervisors to log, review, and manage daily progress efficiently.",
+    highlights: [
+      "Developed with React Native and Expo Go for cross-platform deployment",
+      "Features time logging, real-time hour tracking, and timesheet visualization",
+      "Offline‑first architecture via @react‑native‑async‑storage/async‑storage",
+      "Designed with students in mind for internship requirements and verification",
+    ],
+    techStack: ["React Native", "Expo Go"],
+    links: {
+      live: "https://example.com/logify-demo",
+      github: "https://github.com/KJristine/Logify",
+    },
+    image: "/Logify.png",
   },
 ];
 
